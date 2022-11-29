@@ -1,0 +1,33 @@
+﻿@model Login.Models.User
+@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link href="~/Content/LoginStyle.css" rel="stylesheet" />
+<div id="main-content">
+    <h2 class="text-center">Login</h2>
+    <div class="login-form">
+        @using (@Html.BeginForm("Authorize", "Login", "POST"))
+        {
+            <div class="inputs-control">
+                @Html.LabelFor(model => model.Username)
+                @Html.EditorFor(model => model.Username)
+            </div>
+            <p class="text-error text-center">@Html.ValidationMessageFor(model => model.Username)</p>
+            <div class="inputs-control">
+                @Html.LabelFor(model => model.Password)
+                @Html.EditorFor(model => model.Password)
+            </div>
+            <p class="text-error text-center">@Html.ValidationMessageFor(model => model.Password)</p>
+            <p class="text-error text-center">@Html.DisplayFor(model=>model.LoginErrorMessage)</p>
+            <div class="actions-control">
+                <button type="submit">Login</button>
+                <button type="reset">Clear</button>
+            </div>
+        }
+    </div>
+</div>
+
+<script src="~/Scripts/jquery-3.4.1.min.js"></script>
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>

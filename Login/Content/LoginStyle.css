@@ -1,0 +1,37 @@
+﻿body {
+}
+#main-content{
+    height: 90vh;
+    max-height: fit-content;
+}
+.login-form{
+    width: fit-content;
+    padding: 1em;
+    margin: 0 auto;
+    border-radius: 8px;
+    box-shadow: 0 0 10px #c8c7c7;
+}
+.inputs-control{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1em;
+}
+    .inputs-control label{
+        margin-right: 0.5em;
+    }
+    .inputs-control input{
+        padding: 0.2em 0.8em;
+    }
+.actions-control{
+    display:flex;
+    justify-content: center;
+}
+    .actions-control button{
+        margin: 0 1em;
+    }
+
+.text-error{
+    color:orangered;
+    font-style: italic;
+    font-size: 12px;
+}
